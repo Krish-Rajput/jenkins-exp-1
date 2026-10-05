@@ -6,7 +6,9 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Krish-Rajput/jenkins-exp-1.git'
+                // Since Jenkins already checked out the code, we can just verify or use checkout scm, 
+                // or point the git plugin to your correct repository and branch:
+                git branch: 'main', url: 'https://github.com/Krish-Rajput/jenkins-exp-1.git'
             }
         }
 
